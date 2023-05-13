@@ -55,7 +55,7 @@
                 div_hand.id = 'hand_' + i;
 
                 if(i== 1){
-					div_playerid.innerHTML = 'Dealer ' + players[i].ID;
+					div_playerid.innerHTML = 'Dealer ';
 				}else{
 					div_playerid.innerHTML = 'Player ' + players[i].ID;
 					
@@ -185,8 +185,6 @@
             	updatePoints();
             	updateDeck();
             	check();
-			
-            
         }
 
         function stay()
@@ -225,7 +223,7 @@
             document.getElementById("status").style.display = "inline-block";
             document.getElementById('points_' + 1).innerHTML = players[1].Points;
         }
-
+	
         function check()
         {
             if (players[currentPlayer].Points > 21)

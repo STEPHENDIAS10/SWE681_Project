@@ -11,6 +11,13 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
+	<style>
+  body {
+    background-color: #006633;
+    color: #ffffff;
+  }
+</style>
+
 
 </head>
 <body>
@@ -61,6 +68,10 @@
                     that does not exceed 21 wins the game. In case of a tie, it's a "push" and the player keeps their
                     bet.</p>
             </div>
+            <br>
+            <br>
+            <br>
+            
 			    <form th:action="@{/Game}" method="get">
                     <button type="submit" class="btn btn-primary">Start Game</button>
                 </form>
