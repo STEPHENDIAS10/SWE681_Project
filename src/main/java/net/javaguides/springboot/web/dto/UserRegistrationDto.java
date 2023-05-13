@@ -5,7 +5,8 @@ public class UserRegistrationDto {
 	private String lastName;
 	private String email;
 	private String password;
-	
+	private static final String PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$";
+
 	public UserRegistrationDto(){
 		
 	}
@@ -38,6 +39,7 @@ public class UserRegistrationDto {
 	}
 	public String getPassword() {
 		return password;
+		
 	}
 	public void setPassword(String password) {
 		this.password = password;
