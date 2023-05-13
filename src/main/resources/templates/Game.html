@@ -1,0 +1,86 @@
+<!doctype html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Blackjack</title>
+    <script th:src="@{/js/blackjack.js}"></script>
+    <link rel="stylesheet" href="" th:href="@{/css/blackjack.css}"/>
+    
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+	<style>
+  body {
+    background-color: #006633;
+    text-align: center;
+    
+  }
+  #UserName{
+	  color: #ffffff;
+  }
+</style>
+
+
+</head>
+<body>
+	<!-- create navigation bar ( header) -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/Game}">SWE681 Blackjack</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/}">Back</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<p id="UserName">Player id : <span sec:authentication="principal.username"> User</span></p>
+	<br>
+	<br>
+	<br>
+	
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="game">
+            <h3>Blackjack</h3>
+    
+            <div class="game-body">
+                <div class="game-options">
+                    <input type="button" id="btnStart" class="btn" value="start" onclick="startblackjack()">
+                    <input type="button" class="btn" value="hit me" onclick="hitMe()">
+                    <input type="button" class="btn" value="stay" onclick="stay()">
+                    </div>
+            
+                        <div class="status" id="status"></div>
+            
+                    <div id="deck" class="deck">
+						<p>No of card on Deck</p>
+                        <div id="deckcount">52</div>
+                    </div>
+            
+                    <div id="players" class="players">
+                    </div>
+            
+                    <div class="clear"></div>
+            </div>
+        </div>
+</body>
+
+</html>
