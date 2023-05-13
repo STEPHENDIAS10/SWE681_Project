@@ -1,0 +1,150 @@
+body{
+  font: normal 400 20px "Arial", sans-serif;
+  background-color: #3FC380;
+}
+
+#output {
+      font-size: 1.5em;
+    }
+
+    #playerActions {
+      display: none;
+    }
+
+    .btn {
+      border-radius: 5px;
+      padding: 6px 15px;
+      color: white;
+      display: inline-block;
+      text-align: center;
+      background-color: #111;
+      margin: 10px 10px;
+    }
+
+    #cover {
+      height: 170px;
+      width: 120px;
+      background-color: brown;
+      border-radius: 10px;
+      position: absolute;
+      border: 1px solid black;
+      padding: 3px;
+      z-index: 5;
+    }
+
+    .notCover {
+      height: 0;
+      width: 0;
+    }
+
+    .icard {
+      height: 170px;
+      width: 120px;
+      padding: 3px;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 10px;
+      position: absolute;
+      left: 100px;
+      display: inline-block;
+      font-family: 'Lato';
+    }
+
+    .top-card {
+      font-size: 30px;
+      line-height: 20px;
+      left: 2px;
+      top: 2px;
+    }
+
+    .content-card {
+      text-align: center;
+      font-size: 70px;
+    }
+
+    .bottom-card {
+      font-size: 30px;
+      line-height: 20px;
+      right: 2px;
+      bottom: 2px;
+      transform: rotate(-180deg);
+      -webkit-transform: rotate(-180deg);
+      -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+    }
+
+    .clubs,
+    .spades {
+      color: black;
+    }
+
+    .hearts,
+    .diams {
+      color: red;
+    }
+
+    .hearts .suit::after {
+      content: '\2665';
+    }
+
+    .diams .suit::after {
+      content: '\2666';
+    }
+
+    .spades .suit::after {
+      content: '\2660';
+    }
+
+    .clubs .suit::after {
+      content: '\2663';
+    }
+
+    #dealerHolder,
+    #playerHolder {
+      height: 180px;
+      width: 500px;
+    }
+
+    #message {
+      height: 70px;
+      font-size: 30px;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: 700;
+    }
+
+    #btnHold {
+      background-color: green;
+    }
+
+    #btnHit {
+      background-color: red;
+    }
+
+    #btnDouble {
+      background-color: blue;
+    }
+
+    #maxBet {
+      background-color: red;
+    }
+
+    #btnDeal {
+      background-color: #111;
+    }
+
+    #btnStart {
+      background-color: #111;
+      margin-bottom: 10px;
+    }
+
+    .total {
+      font-size: 30px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    .margin-bottom{
+      margin-bottom: 10px;
+    }
