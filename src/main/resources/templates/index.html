@@ -3,12 +3,21 @@
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta charset="ISO-8859-1">
-<title>Black_Jack_App</title>
+<title>BlackJack App</title>
+<script th:src="@{/js/blackjack.js}"></script>
+    <link rel="stylesheet" href="" th:href="@{/css/blackjack.css}"/>
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
+	<style>
+  body {
+    background-color: #006633;
+    color: #ffffff;
+  }
+</style>
+
 
 </head>
 <body>
@@ -23,7 +32,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" th:href="@{/}">Registration and Login Black Jack</a>
+				<a class="navbar-brand" href="#" th:href="@{/Game}">SWE681 Blackjack</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -37,8 +46,36 @@
 	<br>
 
 	<div class="container">
-		<h1>Welcome to Black Jack Game For SWE681</h1>
+		<h1>Blackjack SWE681</h1>
 		Welcome <span sec:authentication="principal.username"> User</span>
+		
+		<div class="col-md-6">
+                <h2>Game Rules</h2>
+                <p>1. The goal of the game is to beat the dealer by having a hand that is worth more points than the
+                    dealer's hand, without going over 21.</p>
+                <p>2. The value of a hand is determined by the sum of the point values of the individual cards.</p>
+                <p>3. Number cards (2-10) are worth their face value, face cards (J, Q, K) are worth 10 points each, and
+                    Aces can be worth 1 or 11 points.</p>
+                <p>4. The game starts with the player and dealer each receiving two cards. The player's cards are dealt
+                    face-up, while one of the dealer's cards is dealt face-up and the other face-down.</p>
+                <p>5. The player can choose to "hit" (receive another card) or "stand" (keep their current hand) to try
+                    to get closer to 21 without going over.</p>
+                <p>6. If the player's hand exceeds 21, they "bust" and lose the game. If the dealer busts, the player
+                    wins.</p>
+                <p>7. If the player decides to "stand", the dealer reveals their face-down card and hits or stands
+                    according to a predetermined set of rules.</p>
+                <p>8. Once both the player and dealer have completed their turn, the hand with the highest point value
+                    that does not exceed 21 wins the game. In case of a tie, it's a "push" and the player keeps their
+                    bet.</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            
+			    <form th:action="@{/Game}" method="get">
+                    <button type="submit" class="btn btn-primary">Start Game</button>
+                </form>
 	</div>
+
 </body>
 </html>
